@@ -2,6 +2,7 @@ import EncryptedStorage from 'react-native-encrypted-storage';
 import {combineReducers} from '@reduxjs/toolkit';
 import {persistReducer} from 'redux-persist';
 
+import appReducer from './app/slice';
 import authReducer from './auth/slice';
 import booksReducer from './books/slice';
 
@@ -12,6 +13,7 @@ const persistConfig = {
 };
 
 export const rootReducer = combineReducers({
+  app: appReducer,
   auth: authReducer,
   books: booksReducer,
 });
