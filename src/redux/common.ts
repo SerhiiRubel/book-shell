@@ -21,6 +21,7 @@ export function* createSaga(
         successCb(response.data);
       }
     } else {
+      // update common saga and fixed types
       yield put(failureActionCreator(response.data.message));
     }
   } catch (error: any) {

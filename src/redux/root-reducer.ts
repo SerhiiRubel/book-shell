@@ -12,6 +12,7 @@ const persistConfig = {
 };
 
 export const rootReducer = combineReducers({
+  // update rootReducer
   auth: authReducer,
   books: booksReducer,
 });
