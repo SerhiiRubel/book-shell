@@ -20,6 +20,7 @@ export const Header: React.FC<HeaderProps> = ({navigation, back}) => {
   const dispatch = useDispatch();
 
   const title = useMemo(() => getTitle({route}), [route]);
+
   const {icon, onPress} = useMemo(
     () => getRightAction({route, dispatch}),
     [dispatch, route],
