@@ -18,7 +18,7 @@ export type HeaderProps = {
 export const Header: React.FC<HeaderProps> = ({navigation, back}) => {
   const route = useRoute<AppStackRouteProp>();
   const dispatch = useDispatch();
-
+  // update header component
   const title = useMemo(() => getTitle({route}), [route]);
   const {icon, onPress} = useMemo(
     () => getRightAction({route, dispatch}),
